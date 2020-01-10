@@ -1,30 +1,45 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap&subset=cyrillic');
+:root{
+  --blue: #09288D;
+}
+
 body{
   font-family: "russo one", helvetica, sans-serif;
 }
 header{
   background-image: url(./img/pool.jpg);
-width: 100vw;
-height: 100vh;
+  background-repeat: no-repeat;
+  width: full-width;
+  height: 100vh;
+
 }
 header nav{
   font-size: 18px;
-  margin: 36px, 156px auto, 156px;
-  color: white;
-}
-nav ul li{
-  display: inline-block;
+  color: #fff;
   text-align: center;
-  sjustify-content: space-between;
+}
+
+nav ul li{
+  margin-top: 36px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 50px;
+  display: inline-block;
+  justify-content: space-around;
   background-color: rgba( 186, 186, 186, 0.7);
   width: 215px;
-  height: 55px;
+  height: auto;
+  color: #fff;
   list-style: none;
   text-align: center;
-  /* padding: 16px 71px 16px 71px; */
+}
+nav ul li:hover{
+background-color: var(--blue);
+transition: 0.1s ease-out;
 }
 header h1{
+  text-align: center;
   font-size: 144px;
   color: white;
   margin: 0, auto;
@@ -36,5 +51,172 @@ header p:last-child{
 header h1 em{
   font-family: helvetica;
   font-weight: bold;
-  color: #881520;
+  color: #B21321;
+}
+header h1 + p span{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #FFF;
+  text-align: center;
+}
+header .adress span{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: helvetica;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: lighter;
+  margin-left: 40px;
+}
+.low-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.arrow{
+  position: absolute;
+  left: 650px;
+  padding-top: 50px;
+}
+.media{
+  margin-right: 40px;
+}
+.media img{
+  margin-top: 50px;
+  padding: 10px;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+.about h2{
+  font-size: 64px;
+  line-height: 10px;
+}
+.about p{
+  font-family: helvetica;
+  width: 470px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 30px;
+}
+.about p a {
+  text-decoration: none;
+  color: #BABABA;
+}
+.about p a:hover {
+  color: #0D9383;
+  cursor: pointer;
+}
+.about ul{
+  margin-top: 30px;
+  list-style: none;
+  font-family: helvetica;
+  width: 470px;
+  margin-left: -40px;
+}
+
+.contacts{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contacts img{
+  margin-left: 40px;
+  width: 150px;
+  height: 150px;
+}
+.contacts ul{
+  line-height: 30px;
+  list-style: none;
+  font-family: helvetica;
+}
+.contacts h2{
+  font-size: 24px;
+  line-height: 10px;
+}
+
+.contacts a{
+  line-height: 50px;
+  text-decoration: none;
+  font-family: "russo one";
+  color: #fff;
+  background-color: var(--blue);
+  width: 215px;
+  height: 55px;
+  padding: 13px;
+}
+.news h2{
+  font-size: 64px;
+  margin-left: 170px;
+}
+.news a{
+  text-decoration: none;
+  color: #000;
+}
+.articles{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.news_1, .news_2, .news_3{
+  margin-left: 24px;
+  margin-top: 20px;
+  padding: 40px 35px 40px 35px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  width: 280px;
+  min-height: 450px;
+}
+.news img{
+width: 280px;
+height: auto;
+}
+.news h4{
+  margin-top: 0px;
+  font-size: 24px;
+}
+.news_1:hover, .news_2:hover, .news_3:hover{
+  box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease-out;
+}
+.sport h2{
+  font-size: 64px;
+}
+.sport_head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sport_body{
+  margin-left: 190px;
+}
+.sport_body p:first-child{
+  width: 800px;
+}
+.sport_body p:last-child{
+  margin-top: 20px;
+  width: 420px;
+}
+.sport .sport_gal{
+  position: absolute;
+}
+.sport .mount{
+  margin-left: 40px;
+  margin-top: -120px;
+  width: 1320px;
+  height: 618px;
+}
+.sport .velo{
+width: 812px;
+height: 812px;
 }
