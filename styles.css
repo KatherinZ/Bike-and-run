@@ -6,15 +6,51 @@
 
 body{
   font-family: "russo one", helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2{
+  letter-spacing: 1.5px;
+}
+h4{
+font-family: "russo one", helvetica, sans-serif;
 }
 header{
   background-image: url(./img/pool.jpg);
   background-repeat: no-repeat;
   width: full-width;
   height: 100vh;
-
+  /* animation: main_img 20s ease-in-out 10s infinite; */
+}
+@keyframes main_img {
+  25%{
+    background-image: url(./img/sunset.jpg);
+    width: 100vw;
+    height: 100vh;
+  }
+  50%{
+    background-image: url(./img/road2.jpg);
+    width: 100vw;
+    height: 100vh;
+  }
+  75%{
+    background-image: url(./img/peak.jpg);
+    width: 100vw;
+    height: 100vh;
+  }
+  100%{
+    background-image: url(./img/pool.jpg);
+    width: 100vw;
+    height: 100vh;
+  }
 }
 header nav{
+  margin-left: -80px;
   font-size: 18px;
   color: #fff;
   text-align: center;
@@ -35,7 +71,7 @@ nav ul li{
   text-align: center;
 }
 nav ul li:hover{
-background-color: var(--blue);
+background-color: #B21321;
 transition: 0.1s ease-out;
 }
 header h1{
@@ -67,8 +103,8 @@ header .adress span{
   flex-direction: column;
   color: #fff;
   font-family: helvetica;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 22px;
+  line-height: 30px;
   font-weight: lighter;
   margin-left: 40px;
 }
@@ -102,8 +138,9 @@ header .adress span{
   line-height: 10px;
 }
 .about p{
+  font-size: 22px;
   font-family: helvetica;
-  width: 470px;
+  width: 510px;
   border-bottom: 1px solid #000;
   padding-bottom: 30px;
 }
@@ -119,7 +156,8 @@ header .adress span{
   margin-top: 30px;
   list-style: none;
   font-family: helvetica;
-  width: 470px;
+  font-size: 22px;
+  width: 570px;
   margin-left: -40px;
 }
 
@@ -141,20 +179,24 @@ header .adress span{
   font-family: helvetica;
 }
 .contacts h2{
+  font-family: "russo one";
   font-size: 24px;
   line-height: 10px;
 }
-
 .contacts a{
-  line-height: 50px;
+  line-height: 70px;
   text-decoration: none;
   font-family: "russo one";
   color: #fff;
   background-color: var(--blue);
+  border-radius: 12px;
   width: 215px;
   height: 55px;
   padding: 13px;
+
 }
+
+
 .news h2{
   font-size: 64px;
   margin-left: 170px;
@@ -162,6 +204,9 @@ header .adress span{
 .news a{
   text-decoration: none;
   color: #000;
+}
+.news p{
+  font-family: helvetica;
 }
 .articles{
   display: flex;
@@ -189,6 +234,8 @@ height: auto;
   box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.3);
   transition: 0.5s ease-out;
 }
+
+
 .sport h2{
   font-size: 64px;
 }
@@ -197,11 +244,17 @@ height: auto;
   justify-content: space-between;
   align-items: center;
 }
+.sport_head img{
+  max-height: 100px;
+}
+
 .sport_body{
+  font-family: helvetica;
+  font-size: 22px;
   margin-left: 190px;
 }
 .sport_body p:first-child{
-  width: 800px;
+  width: 900px;
 }
 .sport_body p:last-child{
   margin-top: 20px;
@@ -210,13 +263,192 @@ height: auto;
 .sport .sport_gal{
   position: absolute;
 }
-.sport .mount{
-  margin-left: 40px;
-  margin-top: -120px;
+.sport_gal img:hover{
+  transform: scale(1.03);
+  transition: 0.6s ease-in-out;
+}
+.sport_gal .mount{
+  position: absolute;
+  margin-left: 50px;
+  margin-top: -220px;
   width: 1320px;
   height: 618px;
 }
-.sport .velo{
+.sport_gal .velo{
+position: absolute;
+left: 525px;
 width: 812px;
 height: 812px;
+}
+.sport_gal .pool{
+position: absolute;
+top: 270px;
+left: 80px;
+width: 490px;
+height: 490px;
+}
+.sport_gal .workout{
+position: absolute;
+top: 570px;
+left: 200px;
+width: 812px;
+height: 812px;
+}
+.sport_gal .ball{
+position: absolute;
+top: 650px;
+left: 960px;
+width: 390px;
+height: 390px;
+}
+.sport_gal .tennis{
+position: absolute;
+top: 1030px;
+left: 710px;
+width: 690px;
+height: 690px;
+}
+.sport_gal .box{
+position: absolute;
+top: 1200px;
+left: 50px;
+width: 490px;
+height: 490px;
+}
+.sport_gal .zal{
+position: absolute;
+top: 1400px;
+left: 400px;
+width: 550px;
+height: 550px;
+}
+
+.peeps{
+  position: relative;
+  top: 2000px;
+}
+.coaches {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 70px;
+}
+.peeps img{
+  width: 150px;
+  height: 150px;
+}
+.peeps h2{
+  font-size: 64px;
+  margin-left: 170px;
+}
+.peeps h4{
+  font-size: 20px;
+  width: 150px;
+  line-height: 25px;
+  margin-bottom: 0px;
+}
+.peeps p{
+  font-family: helvetica;
+  width: 200px;
+}
+.coaches a{
+  line-height: 70px;
+  text-decoration: none;
+  font-family: "russo one";
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 12px;
+  padding: 13px 48px 13px 48px;
+}
+
+.trails{
+  position: relative;
+  top: 2000px;
+}
+.trails h2{
+  margin-left: 170px;
+  position: relative;
+  font-size: 64px;
+}
+.trails img:first-child{
+    margin-left: -30px;
+}
+.trails img:last-child{
+    margin-right: 15px;
+}
+.trails img{
+  height: 500px;
+  width: auto;
+  margin-left: 15px;
+  z-index: 1;
+}
+.trails ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+  width: 1460px;
+  position: absolute;
+}
+.arrows img{
+  position: absolute;
+  width: 40px;
+  height: auto;
+  z-index: 2;
+}
+.arrows img:first-child{
+  opacity: 0;
+  top: 350px;
+  left: 60px;
+}
+.arrows img:last-child{
+  background-color: rgba(0, 0, 0, 0);
+  padding: 13px 26px 13px 26px;
+  border-radius: 100%;
+  top: 350px;
+  left: 1330px;
+}
+.arrows img:last-child:hover{
+background-color: rgba(0, 0, 0, 0.08);
+padding: 13px 26px 13px 26px;
+border-radius: 100%;
+transition: 0.2s ease-in-out;
+}
+
+
+footer{
+  position: relative;
+  top: 2600px;
+  padding-bottom: 70px;
+}
+footer .media{
+  margin-left: 100px;
+}
+ .yt{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+footer img{
+  height: 41px;
+  width: auto;
+}
+footer a{
+  text-decoration: none;
+  color: #666666;
+  font-family: helvetica;
+  font-size: 22px;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+footer img:last-child{
+  height: 360px;
+}
+.gory{
+  display: flex;
+  flex-direction: row;
+
 }
