@@ -20,10 +20,17 @@ h2{
 h4{
 font-family: "russo one", helvetica, sans-serif;
 }
+header .adress img{
+  display: none;
+}
+br{
+  display: none;
+}
 header{
   background-image: url(./img/pool.jpg);
   background-repeat: no-repeat;
-  width: full-width;
+  background-size: 100%;
+  /* width: full-width; */
   height: 100vh;
   /* animation: main_img 20s ease-in-out 10s infinite; */
 }
@@ -71,14 +78,15 @@ nav ul li{
   text-align: center;
 }
 nav ul li:hover{
-background-color: #B21321;
+background-color: var(--blue);
 transition: 0.1s ease-out;
 }
 header h1{
   text-align: center;
-  font-size: 144px;
+  font-size: 8vw;
   color: white;
   margin: 0, auto;
+  margin-top: 140px;
 }
 header p:last-child{
   font-family: helvetica;
@@ -118,12 +126,19 @@ header .adress span{
   left: 650px;
   padding-top: 50px;
 }
-.media{
+header .media{
   margin-right: 40px;
 }
-.media img{
+ header .media img{
+   max-height: 25px;
   margin-top: 50px;
   padding: 10px;
+}
+header .media img:hover{
+  /* width: 30px;
+  height: 30px;
+  transition: 0.7s ease; */
+
 }
 .info{
   display: flex;
@@ -132,17 +147,23 @@ header .adress span{
 }
 
 
-
+.about{
+  margin-left: -20vw;
+}
 .about h2{
   font-size: 64px;
   line-height: 10px;
+
 }
 .about p{
   font-size: 22px;
   font-family: helvetica;
   width: 510px;
-  border-bottom: 1px solid #000;
   padding-bottom: 30px;
+}
+.about .line{
+  width: 200px;
+  border-bottom: 1px solid #000;
 }
 .about p a {
   text-decoration: none;
@@ -153,7 +174,7 @@ header .adress span{
   cursor: pointer;
 }
 .about ul{
-  margin-top: 30px;
+  margin-top: 40px;
   list-style: none;
   font-family: helvetica;
   font-size: 22px;
@@ -162,7 +183,7 @@ header .adress span{
 }
 
 .contacts{
-  margin-top: 40px;
+  margin-top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -185,6 +206,7 @@ header .adress span{
 }
 .contacts a{
   line-height: 70px;
+    letter-spacing: 0.7px;
   text-decoration: none;
   font-family: "russo one";
   color: #fff;
@@ -199,7 +221,7 @@ header .adress span{
 
 .news h2{
   font-size: 64px;
-  margin-left: 170px;
+  margin-left: 11vw;
 }
 .news a{
   text-decoration: none;
@@ -207,6 +229,7 @@ header .adress span{
 }
 .news p{
   font-family: helvetica;
+  margin-top: 30px;
 }
 .articles{
   display: flex;
@@ -229,6 +252,7 @@ height: auto;
 .news h4{
   margin-top: 0px;
   font-size: 24px;
+  letter-spacing: 0.7px;
 }
 .news_1:hover, .news_2:hover, .news_3:hover{
   box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.3);
@@ -239,7 +263,11 @@ height: auto;
 .sport h2{
   font-size: 64px;
 }
+.sport-head a h2{
+  scroll-behavior: smooth;
+}
 .sport_head{
+  margin: 20px 60px 40px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -247,11 +275,10 @@ height: auto;
 .sport_head img{
   max-height: 100px;
 }
-
 .sport_body{
   font-family: helvetica;
   font-size: 22px;
-  margin-left: 190px;
+  margin-left: 160px;
 }
 .sport_body p:first-child{
   width: 900px;
@@ -267,12 +294,15 @@ height: auto;
   transform: scale(1.03);
   transition: 0.6s ease-in-out;
 }
+.sport_gal img:first-child:hover{
+  transform: none;
+}
 .sport_gal .mount{
   position: absolute;
-  margin-left: 50px;
+  left: 90px;
   margin-top: -220px;
-  width: 1320px;
-  height: 618px;
+  width: 1250px;
+  height: 615px;
 }
 .sport_gal .velo{
 position: absolute;
@@ -347,6 +377,7 @@ height: 550px;
   width: 150px;
   line-height: 25px;
   margin-bottom: 0px;
+  letter-spacing: 0.7px;
 }
 .peeps p{
   font-family: helvetica;
@@ -360,7 +391,9 @@ height: 550px;
   color: #fff;
   border-radius: 12px;
   padding: 13px 48px 13px 48px;
+  letter-spacing: 0.7px;
 }
+
 
 .trails{
   position: relative;
@@ -382,6 +415,9 @@ height: 550px;
   width: auto;
   margin-left: 15px;
   z-index: 1;
+}
+.trails ul img:nth-of-type(2):hover{
+  left: -240px;
 }
 .trails ul{
   display: flex;
@@ -425,30 +461,235 @@ footer{
 footer .media{
   margin-left: 100px;
 }
- .yt{
+ .insta a, .fb a, .yt a{
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: center;
+
 }
-footer img{
+footer .media a img{
   height: 41px;
   width: auto;
+  padding-right: 30px;
 }
-footer a{
+footer .media a{
   text-decoration: none;
   color: #666666;
   font-family: helvetica;
   font-size: 22px;
+  padding-top: 20px;
+}
+footer a p{
+  padding-bottom: -20px;
 }
 footer a:hover{
   text-decoration: underline;
 }
-footer img:last-child{
+footer .mmm img{
+  height: 360px;
+}
+ .mmm + a img{
+  width: 75px;
+  height: auto;
+  margin-left: 10vw;
+}
+ .mmm + a img:hover{
+   background-color: rgba(102, 102, 102, 0.2);
+   border-radius: 100%;
+   transition: 0.15s ease;
+ }
+footer .mmm img{
   height: 360px;
 }
 .gory{
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
 
+
+@media (max-width: 1280px) {
+  header .adress{
+    margin-top: -100px;
+  }
+  header .low-line .media img{
+   margin-top: -200px;
+ }
+
+ header .arrow{
+   display: none;
+ }
+ header h1{
+   margin-top: 50px;
+ }
+ .news_1, .news_2, .news_3{
+   width: 250px;
+   min-height: 350px;
+ }
+ .news img{
+   width: 250px;
+ }
+
+ .about{
+   margin-left: -200px;
+ }
+
+.sport_body p{
+  font-size: 20px;
+}
+ .sport_gal .mount{
+   top: 50px;
+   left: 120px;
+   width: 1038px;
+   height: 486px;
+ }
+ .sport_gal .velo{
+ left: 500px;
+ width: 619px;
+ height: 619px;
+ }
+ .sport_gal .pool{
+ top: 200px;
+ left: 125px;
+ width: 430px;
+ height: 430px;
+ }
+ .sport_gal .workout{
+ top: 450px;
+ left: 270px;
+ width: 620px;
+ height: 620px;
+ }
+ .sport_gal .ball{
+ top: 485px;
+ left: 840px;
+ width: 333px;
+ height: 333px;
+ }
+ .sport_gal .tennis{
+ top: 795px;
+ left: 670px;
+ width: 500px;
+ height: 500px;
+ }
+ .sport_gal .box{
+ top: 885px;
+ left: 115px;
+ width: 430px;
+ height: 430px;
+ }
+ .sport_gal .zal{
+ top: 1070px;
+ left: 435px;
+ width: 409px;
+ height: 409px;
+ }
+
+ .peeps{
+   top: 1500px;
+ }
+ .trails{
+   top: 1500px;
+ }
+ footer{
+   position: relative;
+   top: 2060px;
+ }
+}
+@media (max-width: 768px) {
+  header{
+    height: 170%;
+  }
+header nav ul li{
+  margin-top: 20px;
+  font-size: 16px;
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header h1{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 55px;
+  margin-top: 10px;
+}
+
+header h1 + p span{
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: -25px;
+  text-align: center;
+  line-height: 20px;
+}
+header h1 + p span:nth-last-of-type(2){
+  display: none;
+}
+header h1 + p span:last-child{
+  display: none;
+}
+br{
+  display: inline;
+}
+header .adress p{
+  display: none;
+}
+ header .adress img{
+   display: inherit;
+   margin-top: 65px;
+   margin-left: 5vw;
+   animation: bounce 1s ease  infinite;
+ }
+ .low-line{
+ margin-top: -25px;
+ }
+ @keyframes bounce {
+0%{
+margin-top: 65px;
+}
+50%{
+  margin-top: 55px;
+}
+100%{
+  margin-top: 65px;
+}
+ }
+ header .adress img:hover{
+animation: none;
+}
+ .about{
+   margin-left: 300px;
+ }
+ .about h2{
+  font-size: 48px;
+}
+.about p, .about ul{
+  font-size: 18px;
+}
+.about p{
+  margin-bottom: -10px;
+}
+.about ul{
+  margin-top: 15px;
+}
+
+.contacts{
+  margin-right: 50vw;
+}
+.contacts img{
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100px;
+  height: auto;
+}
+.contacts ul h2{
+  font-size: 18px;
+}
+.contacts ul li{
+  line-height: 20px;
+}
+.contacts a{
+  font-size: 12px;
+  font-weight: lighter;
+}
 }
