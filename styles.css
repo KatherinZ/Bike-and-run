@@ -658,7 +658,7 @@ margin-top: 65px;
 animation: none;
 }
  .about{
-   margin-left: 300px;
+   margin-left: 100px;
  }
  .about h2{
   font-size: 48px;
@@ -674,7 +674,8 @@ animation: none;
 }
 
 .contacts{
-  margin-right: 50vw;
+  margin-top: 20px;
+  margin-left: -70px;
 }
 .contacts img{
   padding-left: 20px;
@@ -691,5 +692,8 @@ animation: none;
 .contacts a{
   font-size: 12px;
   font-weight: lighter;
+}
+.info{
+  justify-content: space-between;
 }
 }
