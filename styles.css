@@ -81,6 +81,9 @@ nav ul li:hover{
 background-color: var(--blue);
 transition: 0.1s ease-out;
 }
+nav .mask img{
+  display: none;
+}
 header h1{
   text-align: center;
   font-size: 8vw;
@@ -696,4 +699,72 @@ animation: none;
 .info{
   justify-content: space-between;
 }
+}
+
+@media (max-width: 375px) {
+
+header{
+  background-image: url(./img/pool_1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+header h1{
+  font-size: 10vw;
+  line-height: 40px;
+}
+header h1 + p span{
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 20px;
+}
+header nav ul{
+  display: none;
+}
+nav .mask{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(186, 186, 186, 0.7);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  width: 300px;
+  height: 50px;
+}
+nav .mask img{
+  max-height: 25px;
+  width: auto;
+  padding: 20px;
+}
+header .adress img{
+ max-height: 32px;
+}
+header .low-line {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+header .media {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-right: 15px;
+}
+header .media img{
+ max-height: 12px;
+}
+.about{
+  margin-left: 0px;
+}
+.about a h2{
+  font-size: 36px;
+  margin-left: 60px;
+}
+.about p{
+  font-size: 16px;
+  margin-left: 25px;
+
+}
+
+
 }
