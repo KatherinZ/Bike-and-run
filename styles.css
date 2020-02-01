@@ -30,31 +30,7 @@ header{
   background-image: url(./img/pool.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  /* width: full-width; */
   height: 100vh;
-  /* animation: main_img 20s ease-in-out 10s infinite; */
-}
-@keyframes main_img {
-  25%{
-    background-image: url(./img/sunset.jpg);
-    width: 100vw;
-    height: 100vh;
-  }
-  50%{
-    background-image: url(./img/road2.jpg);
-    width: 100vw;
-    height: 100vh;
-  }
-  75%{
-    background-image: url(./img/peak.jpg);
-    width: 100vw;
-    height: 100vh;
-  }
-  100%{
-    background-image: url(./img/pool.jpg);
-    width: 100vw;
-    height: 100vh;
-  }
 }
 header nav{
   margin-left: -80px;
@@ -185,7 +161,7 @@ header .media img:hover{
   margin-left: -40px;
 }
 
-.contacts{
+.about .contacts{
   margin-top: 130px;
   display: flex;
   flex-direction: column;
@@ -207,7 +183,7 @@ header .media img:hover{
   font-size: 24px;
   line-height: 10px;
 }
-.contacts a{
+.contacts li + a{
   line-height: 70px;
     letter-spacing: 0.7px;
   text-decoration: none;
@@ -701,7 +677,7 @@ animation: none;
 }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
 
 header{
   background-image: url(./img/pool_1.jpg);
@@ -758,13 +734,70 @@ header .media img{
 }
 .about a h2{
   font-size: 36px;
-  margin-left: 60px;
+  margin-left: 25px;
 }
-.about p{
+.about p, li{
   font-size: 16px;
   margin-left: 25px;
+  width: 330px;
+}
+.about .line {
+  margin-left: 25px;
+  width: 120px;
+}
+.contacts{
+margin-top: 400px;
+margin-left: -600px;
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content:
+
+}
+.contacts img{
+  width: 90px;
+  height: 90px;
+}
+.contacts ul{
+padding: 0;
+margin: 0;
+}
+.contacts ul li a{
+  margin: 0;
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+  font-size: 14px;
+}
+
+.contacts ul li a:hover {
+  color: #0D9383;
+}
+.contacts ul li{
+  margin: 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.contacts h2{
+  display: none;
 
 }
 
+
+.news h2{
+  font-size: 36px;
+  margin:  0px auto 0px 25px;
+}
+
+.news .news_1, .news .news_2, .news .news_3 {
+  width: 250px;
+  height: 500px;
+}
+.news .articles{
+  margin-left: 200px;
+  overflow-x: scroll;
+}
 
 }
