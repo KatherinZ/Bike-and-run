@@ -723,12 +723,15 @@ header .low-line {
 header .media {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   padding-top: 10px;
   margin-right: 15px;
 }
 header .media img{
  max-height: 12px;
 }
+
+
 .about{
   margin-left: 0px;
 }
@@ -747,7 +750,7 @@ header .media img{
 }
 .contacts{
 margin-top: 400px;
-margin-left: -600px;
+margin-left: -550px;
 position: relative;
 display: flex;
 flex-direction: row;
@@ -765,8 +768,8 @@ margin: 0;
 .contacts ul li a{
   margin: 0;
   text-decoration: none;
-  font-weight: 400;
-  color: #000;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
 
@@ -779,25 +782,205 @@ margin: 0;
   color: #000;
   font-size: 14px;
 }
-
 .contacts h2{
   display: none;
 
 }
 
-
+/* Новости */
 .news h2{
   font-size: 36px;
-  margin:  0px auto 0px 25px;
+  margin:  30px auto 0px 25px;
 }
 
 .news .news_1, .news .news_2, .news .news_3 {
   width: 250px;
   height: 500px;
 }
+.news .news_3 {
+    margin-right: 25px;
+}
 .news .articles{
-  margin-left: 200px;
   overflow-x: scroll;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.news img{
+width: 250px;
+height: auto;
+}
+.news h4{
+  font-size: 22px;
 }
 
+
+/* Спорт */
+.sport .sport_head h2{
+  font-size: 36px;
+  margin:  30px auto 0 0;
+}
+.sport_head{
+  margin: 20px auto 40px 10px;
+  align-items: baseline;
+}
+
+.sport_head img{
+max-width: 70px;
+max-height: 40px;
+padding-right: 5px;
+}
+.sport_head a + img{
+  display: none;
+}
+.sport_head img:last-child{
+  display: none;
+}
+.sport_body{
+  margin-left: 25px;
+}
+.sport_body p:first-child,.sport_body p:last-child {
+ font-size: 16px;
+ width: 340px;
+
+}
+
+
+
+.sport_gal .mount{
+left: 15vw;
+top: 30vh;
+width: 303px;
+height: 142px;
+}
+.sport_gal .velo{
+left: 40vw;
+top: 3vh;
+width: 200px;
+height: 200px;
+}
+.sport_gal .pool{
+top: 14vh;
+left: 12.55vw;
+width: 142px;
+height: 143px;
+}
+.sport_gal .workout{
+top: 25vh;
+left: 23vw;
+width: 211px;
+height: 211px;
+}
+.sport_gal .ball{
+top: 23.5vh;
+left: 66vw;
+width: 128px;
+height: 128px;
+}
+.sport_gal .tennis{
+top: 41vh;
+left: 60vw;
+width: 136px;
+height: 136px;
+}
+.sport_gal .box{
+top: 46vh;
+left: 11vw;
+width: 142px;
+height: 142px;
+}
+.sport_gal .zal{
+top: 53vh;
+left: 30vw;
+width: 222px;
+height: 222px;
+}
+
+
+ /* тренера */
+.peeps h2{
+  font-size: 36px;
+  margin-left: 25px;
+  letter-spacing: normal;
+}
+ .coaches img{
+   width: 90px;
+   height: 90px;
+   padding: 0;
+ }
+ .coaches {
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+.coaches p{
+  font-size: 14px;
+}
+.peeps h4{
+  font-size: 18px;
+  width: 130px;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+.coaches a{
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 13px 20px 13px 20px;
+  letter-spacing: 0.7px;
+}
+.coach_2, .coach_3{
+    margin-top: 40px;
+
+}
+.coach_1{
+  margin-left: -150px;
+}
+.coach_2{
+  margin-left: 200px;
+  margin-top: -140px;
+}
+.coach_3{
+  margin-left: -100px;
+    margin-top: -170px;
+}
+
+
+/* Маршруты */
+.trails h2{
+  font-size: 36px;
+  margin-left: 25px;
+  letter-spacing: normal;
+}
+.trails ul{
+  width: auto;
+  overflow-x: scroll;
+}
+.trails ul img{
+  height: 200px;
+  width: auto;
+  margin-left: 5px;
+}
+
+
+/* Футер */
+
+footer .media{
+  margin-left: 40px;
+}
+footer .media a{
+  padding-top: 0;
+}
+footer .media a img{
+  height: 25px;
+  width: auto;
+}
+footer p{
+  font-size: 16px;
+}
+
+footer .mmm img{
+  height: 100px;
+  position: absolute;
+  top: -200px;
+  left: 0px;
+}
 }
