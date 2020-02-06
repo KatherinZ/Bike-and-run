@@ -38,7 +38,9 @@ header nav{
   color: #fff;
   text-align: center;
 }
-
+header nav img{
+  display: none;
+}
 nav ul li{
   margin-top: 36px;
   padding-top: 15px;
@@ -56,9 +58,6 @@ nav ul li{
 nav ul li:hover{
 background-color: var(--blue);
 transition: 0.1s ease-out;
-}
-nav .mask img{
-  display: none;
 }
 header h1{
   text-align: center;
@@ -438,31 +437,20 @@ footer{
   padding-bottom: 70px;
 }
 footer .media{
-  margin-left: 100px;
-}
- .insta a, .fb a, .yt a{
+  margin-left: 50px;
+  margin-top: 320px;
   display: flex;
   align-items: center;
   flex-direction: row;
-
 }
+
 footer .media a img{
   height: 41px;
   width: auto;
   padding-right: 30px;
 }
 footer .media a{
-  text-decoration: none;
-  color: #666666;
-  font-family: helvetica;
-  font-size: 22px;
   padding-top: 20px;
-}
-footer a p{
-  padding-bottom: -20px;
-}
-footer a:hover{
-  text-decoration: underline;
 }
 footer .mmm img{
   height: 360px;
@@ -479,6 +467,9 @@ footer .mmm img{
  }
 footer .mmm img{
   height: 360px;
+}
+footer .mmm + a img{
+  margin-top: 150px;
 }
 .gory{
   display: flex;
@@ -691,29 +682,34 @@ header h1{
 header h1 + p span{
   font-size: 14px;
   line-height: 16px;
-  padding-top: 20px;
+  padding-top: 1.38vw;
 }
-header nav ul{
+header nav li{
   display: none;
 }
-nav .mask{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(186, 186, 186, 0.7);
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
-  width: 300px;
-  height: 50px;
+header nav ul{
+ align-items: center;
+ padding-top: 15px;
+ background-color: rgba(178, 19, 33, 0.6);
+ height: 20px;
+ margin-top: 0;
 }
-nav .mask img{
-  max-height: 25px;
-  width: auto;
-  padding: 20px;
+header nav ul a img{
+  max-width: 7vw;
+  max-height: 7vw;
+  margin-left: 10vw;
+}
+header ul a li + img{
+  display: inline-block;
+  justify-content: space-around;
+}
+
+header nav ul a img:nth-of-type(2n+1):hover{
+  mask: url(./img/sneaker_blue.svg);
 }
 header .adress img{
  max-height: 32px;
+ animation: inherit;
 }
 header .low-line {
   display: flex;
@@ -897,6 +893,9 @@ height: 222px;
 
 
  /* тренера */
+ .peeps{
+   top: 90vh;
+ }
 .peeps h2{
   font-size: 36px;
   margin-left: 25px;
@@ -945,6 +944,9 @@ height: 222px;
 
 
 /* Маршруты */
+.trails{
+  top: 90vh;
+}
 .trails h2{
   font-size: 36px;
   margin-left: 25px;
@@ -962,9 +964,12 @@ height: 222px;
 
 
 /* Футер */
-
+footer{
+  top: 150vh;
+}
 footer .media{
   margin-left: 40px;
+  margin-top: 0;
 }
 footer .media a{
   padding-top: 0;
@@ -972,15 +977,20 @@ footer .media a{
 footer .media a img{
   height: 25px;
   width: auto;
-}
-footer p{
-  font-size: 16px;
+  padding-right: 20px;
 }
 
+
 footer .mmm img{
-  height: 100px;
+  height: 37vw;
   position: absolute;
-  top: -200px;
-  left: 0px;
+  top: -42vw;
+  left: 12vw;
+}
+footer .mmm + a img{
+  width: 40px;
+  height: auto;
+  margin-top: 0;
+  margin-left: 34vw;
 }
 }
