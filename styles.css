@@ -59,6 +59,9 @@ nav ul li:hover{
 background-color: var(--blue);
 transition: 0.1s ease-out;
 }
+header nav .burger{
+  display: none;
+}
 header h1{
   text-align: center;
   font-size: 8vw;
@@ -108,7 +111,7 @@ header .media{
   margin-right: 40px;
 }
  header .media img{
-   max-height: 25px;
+  max-height: 25px;
   margin-top: 50px;
   padding: 10px;
 }
@@ -677,17 +680,25 @@ header{
 }
 header h1{
   font-size: 10vw;
-  line-height: 40px;
+  line-height: 9.5vw;
 }
 header h1 + p span{
-  font-size: 14px;
-  line-height: 16px;
-  padding-top: 1.38vw;
+  font-size: 3vw;
+  line-height: 3.6vw;
+  padding-top: 2vw;
 }
 header nav li{
   display: none;
 }
-header nav ul{
+header nav img:first-child{
+  display: block;
+  padding-left: 25vw;
+  padding-top: 5vw;
+  width: 6vw;
+  height: auto;
+}
+
+/* header nav ul{
  align-items: center;
  padding-top: 15px;
  background-color: rgba(178, 19, 33, 0.6);
@@ -702,51 +713,71 @@ header nav ul a img{
 header ul a li + img{
   display: inline-block;
   justify-content: space-around;
-}
+} */
 
-header nav ul a img:nth-of-type(2n+1):hover{
-  mask: url(./img/sneaker_blue.svg);
-}
 header .adress img{
  max-height: 32px;
- animation: inherit;
 }
 header .low-line {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  height: 70px;
 }
 header .media {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   padding-top: 10px;
   margin-right: 15px;
 }
 header .media img{
- max-height: 12px;
+ max-height: 14px;
+ padding: 5px;
+ margin: 0;
+}
+/* header nav img:last-child{
+mask: url(../img/home.svg);
+-webkit-mask: url(..//img/not.svg);
+} */
+nav .home, nav .service, nav .sport, nav .couch, nav .trails{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+header nav .burger img:first-child{
+  display: block;
+}
+header nav .burger img:first-child:hover{
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  width: 200px;
+  height: 300px;
+  padding: 30px;
 }
 
 
+/* о нас */
 .about{
-  margin-left: 0px;
+  margin-left: 0vw;
 }
 .about a h2{
-  font-size: 36px;
+  font-size: 8vw;
   margin-left: 25px;
 }
 .about p, li{
   font-size: 16px;
   margin-left: 25px;
-  width: 330px;
+  width: 80vw;
 }
 .about .line {
   margin-left: 25px;
-  width: 120px;
+  width: 45vw;
 }
 .contacts{
-margin-top: 400px;
-margin-left: -550px;
+margin-top: 100vw;
+margin-left: -140vw;
 position: relative;
 display: flex;
 flex-direction: row;
@@ -754,8 +785,8 @@ justify-content:
 
 }
 .contacts img{
-  width: 90px;
-  height: 90px;
+  width: 25vw;
+  height: 25vw;
 }
 .contacts ul{
 padding: 0;
@@ -785,13 +816,15 @@ margin: 0;
 
 /* Новости */
 .news h2{
-  font-size: 36px;
+  font-size: 8vw;
   margin:  30px auto 0px 25px;
 }
 
 .news .news_1, .news .news_2, .news .news_3 {
-  width: 250px;
-  height: 500px;
+  width: 55vw;
+  height: 65vw;
+  margin-bottom: 40px;
+  border-radius: 12.5%;
 }
 .news .news_3 {
     margin-right: 25px;
@@ -802,17 +835,17 @@ margin: 0;
   justify-content: space-between;
 }
 .news img{
-width: 250px;
-height: auto;
+width: 55vw;
+max-height: 120px;
 }
 .news h4{
-  font-size: 22px;
+  font-size: 4.3vw;
 }
 
 
 /* Спорт */
 .sport .sport_head h2{
-  font-size: 36px;
+  font-size: 8vw;
   margin:  30px auto 0 0;
 }
 .sport_head{
@@ -821,8 +854,8 @@ height: auto;
 }
 
 .sport_head img{
-max-width: 70px;
-max-height: 40px;
+max-width: 23vw;
+max-height: 10vw;
 padding-right: 5px;
 }
 .sport_head a + img{
@@ -836,7 +869,7 @@ padding-right: 5px;
 }
 .sport_body p:first-child,.sport_body p:last-child {
  font-size: 16px;
- width: 340px;
+ width: 80vw;
 
 }
 
@@ -844,51 +877,51 @@ padding-right: 5px;
 
 .sport_gal .mount{
 left: 15vw;
-top: 30vh;
-width: 303px;
-height: 142px;
+top: 28vh;
+width: 75vw;
+height: 43vw;
 }
 .sport_gal .velo{
 left: 40vw;
 top: 3vh;
-width: 200px;
-height: 200px;
+width: 49vw;
+height: 49vw;
 }
 .sport_gal .pool{
 top: 14vh;
-left: 12.55vw;
-width: 142px;
-height: 143px;
+left: 14vw;
+width: 33vw;
+height: 33vw;
 }
 .sport_gal .workout{
 top: 25vh;
 left: 23vw;
-width: 211px;
-height: 211px;
+width: 51vw;
+height: 51vw;
 }
 .sport_gal .ball{
-top: 23.5vh;
-left: 66vw;
-width: 128px;
-height: 128px;
+top: 24.5vh;
+left: 67.5vw;
+width: 28vw;
+height: 28vw;
 }
 .sport_gal .tennis{
 top: 41vh;
-left: 60vw;
-width: 136px;
-height: 136px;
+left: 61vw;
+width: 33vw;
+height: 33vw;
 }
 .sport_gal .box{
 top: 46vh;
 left: 11vw;
-width: 142px;
-height: 142px;
+width: 33vw;
+height: 33vw;
 }
 .sport_gal .zal{
 top: 53vh;
 left: 30vw;
-width: 222px;
-height: 222px;
+width: 56vw;
+height: 56vw;
 }
 
 
@@ -897,7 +930,7 @@ height: 222px;
    top: 90vh;
  }
 .peeps h2{
-  font-size: 36px;
+  font-size: 8vw;
   margin-left: 25px;
   letter-spacing: normal;
 }
@@ -955,7 +988,9 @@ height: 222px;
 .trails ul{
   width: auto;
   overflow-x: scroll;
+  width: 1340px;
 }
+
 .trails ul img{
   height: 200px;
   width: auto;
