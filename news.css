@@ -1,0 +1,121 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap&subset=cyrillic');
+:root{
+  --blue: #09288D;
+}
+body{
+  font-family: "russo one", helvetica, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header nav{
+  margin-left: -80px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  background-color: var(--blue);
+}
+nav ul a li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 4vw;
+  display: inline-block;
+  justify-content: space-around;
+  width: 14vw;
+  height: auto;
+  color: #fff;
+  list-style: none;
+  text-align: center;
+}
+nav ul li:hover{
+background-color: var(--blue);
+transition: 0.1s ease-out;
+}
+.news img{
+  width: 40vw;
+  margin-top: 0px;
+}
+.news p{
+  width: 40vw;
+  font-family: helvetica, sans-serif;
+}
+.news h2{
+  font-size: 2vw;
+}
+.news{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 2.5vw;
+}
+.news .rect{
+  width: 6vw;
+  height: 0.25vw;
+  background-color: #000;
+}
+.news .rect_2{
+  width: 22vw;
+  height: 12vw;
+  background-color: var(--blue);
+  opacity: 40%;
+  position: absolute;
+  z-index: -1;
+  left: 50vw;
+  top: 6.7vw;
+}
+.news .rect_3{
+  background-color: var(--blue);
+  opacity: 40%;
+  position: absolute;
+  z-index: -1;
+  width: 40vw;
+  height: 23vw;
+  left: 3.5vw;
+  top: 7.5vw;
+}
+.map{
+margin-left: 28vw;
+margin-top: 3vw;
+}
+
+footer{
+  PADDING-TOP: 40px;
+  padding-bottom: 70px;
+}
+footer .media{
+  margin-left: 4vw;
+  margin-top: 22vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+footer .media a img{
+  height: 25px;
+  width: auto;
+  padding-right: 3vw;
+}
+footer .media a{
+  padding-top: 20px;
+}
+footer .mmm img{
+  height: 25vw;
+  padding-left: 9vw;
+}
+ .mmm + a img{
+  width: 5vw;
+  height: auto;
+  margin-left: 10vw;
+  margin-top: 10vw;
+}
+ .mmm + a img:hover{
+   background-color: rgba(102, 102, 102, 0.2);
+   border-radius: 100%;
+   transition: 0.15s ease;
+ }
+.gory{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
