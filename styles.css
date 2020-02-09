@@ -94,7 +94,7 @@ header .adress span{
   font-family: helvetica;
   font-size: 22px;
   line-height: 30px;
-  font-weight: lighter;
+  font-weight: 400;
   margin-left: 40px;
 }
 .low-line{
@@ -163,7 +163,7 @@ header .media img:hover{
   margin-left: -40px;
 }
 
-.about .contacts{
+.contacts{
   margin-top: 130px;
   display: flex;
   flex-direction: column;
@@ -184,6 +184,16 @@ header .media img:hover{
   font-family: "russo one";
   font-size: 24px;
   line-height: 10px;
+}
+.contacts ul li a{
+  margin: 0;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.contacts ul li a:hover{
+  color: #0D9383;
 }
 .contacts li + a{
   line-height: 70px;
@@ -448,7 +458,7 @@ footer .media{
 }
 
 footer .media a img{
-  height: 41px;
+  height: 25px;
   width: auto;
   padding-right: 30px;
 }
@@ -457,23 +467,19 @@ footer .media a{
 }
 footer .mmm img{
   height: 360px;
+  padding-left: 120px;
 }
  .mmm + a img{
   width: 75px;
   height: auto;
   margin-left: 10vw;
+  margin-top: 150px;
 }
  .mmm + a img:hover{
    background-color: rgba(102, 102, 102, 0.2);
    border-radius: 100%;
    transition: 0.15s ease;
  }
-footer .mmm img{
-  height: 360px;
-}
-footer .mmm + a img{
-  margin-top: 150px;
-}
 .gory{
   display: flex;
   flex-direction: row;
